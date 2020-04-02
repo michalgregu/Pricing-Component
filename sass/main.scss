@@ -15,7 +15,6 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
-     transform: scale(0.8, 0.8);
  }
  
  .img-1 {
@@ -30,7 +29,7 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     margin-top: -1rem;
+     margin-top: 1rem;
      margin-bottom: 2rem;
      h1 {
          color: $grayish3;
@@ -61,7 +60,7 @@
  }
  
  .price-card {
-     height: 450px;
+     height: 490px;
      background: #fff;
      color: $grayish4;
      padding: 2rem;
@@ -118,6 +117,10 @@
              border: 1px solid $grayish4;
          }
      }
+     border-radius: 0px 8px 8px 0px;
+     &:first-child {
+         border-radius: 8px 0px 0px 8px;
+     }
  }
  
  .price-card-pro {
@@ -128,7 +131,7 @@
      }
      background: linear-gradient(to bottom, $gradient1, $gradient2);
      border-radius: 8px;
-     height: 490px;
+     height: 530px;
      padding-top: 52px;
      button {
          color: $gradient2;
@@ -152,4 +155,20 @@
  
  .attribution a {
      color: hsl(228, 45%, 44%);
+ }
+ 
+ @media (max-width:1000px) {
+     .price-cards {
+         grid-template-columns: 1fr;
+     }
+     .price-card:first-child {
+         border-radius: 8px;
+     }
+     .price-card {
+         margin-bottom: 1rem;
+         border-radius: 8px;
+     }
+     .price-card-pro {
+         height: 490px;
+     }
  }

@@ -90,8 +90,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: scale(0.8, 0.8);
-          transform: scale(0.8, 0.8);
 }
 
 .img-1 {
@@ -114,7 +112,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -1rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -152,7 +150,7 @@ header .toggle .switch {
 }
 
 .price-card {
-  height: 450px;
+  height: 490px;
   background: #fff;
   color: #494c5f;
   padding: 2rem;
@@ -168,6 +166,7 @@ header .toggle .switch {
           align-items: center;
   -webkit-box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.07);
   box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.07);
+  border-radius: 0px 8px 8px 0px;
 }
 
 .price-card h1 {
@@ -228,11 +227,15 @@ header .toggle .switch {
   border: 1px solid #494c5f;
 }
 
+.price-card:first-child {
+  border-radius: 8px 0px 0px 8px;
+}
+
 .price-card-pro {
   background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
   background: linear-gradient(to bottom, #a3a8f0, #696fdd);
   border-radius: 8px;
-  height: 490px;
+  height: 530px;
   padding-top: 52px;
 }
 
@@ -265,5 +268,22 @@ header .toggle .switch {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media (max-width: 1000px) {
+  .price-cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .price-card:first-child {
+    border-radius: 8px;
+  }
+  .price-card {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  .price-card-pro {
+    height: 490px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
