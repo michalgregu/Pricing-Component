@@ -1,0 +1,155 @@
+ @import './reset';
+ @import './toggle';
+ html {
+     height: 100%;
+ }
+ 
+ body {
+     font-size: 15px;
+     font-family: Montserrat, sans-serif;
+     background-color: $grayish1;
+     background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+     //  background-size: 300px;
+     background-repeat: no-repeat;
+     background-position: top right, bottom left;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     transform: scale(0.8, 0.8);
+ }
+ 
+ .img-1 {
+     position: absolute;
+     top: 0;
+     right: 0;
+ }
+ 
+ // TOGGLE 
+ header {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: -1rem;
+     margin-bottom: 2rem;
+     h1 {
+         color: $grayish3;
+     }
+     .toggle {
+         margin-top: 2rem;
+         &:first-child,
+         &:last-child {
+             color: $grayish2;
+         }
+         .switch {
+             transform: scale(0.8, 0.8);
+             margin-left: 1rem;
+             margin-right: 1rem;
+         }
+     }
+ }
+ 
+ // END OF TOGGLE
+ // PRICE CARDS
+ .price-cards {
+     margin: auto;
+     display: grid;
+     grid-template-columns: repeat(3, 330px);
+     grid-template-rows: 500px;
+     margin-bottom: 3rem;
+     align-items: center;
+ }
+ 
+ .price-card {
+     height: 450px;
+     background: #fff;
+     color: $grayish4;
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     -webkit-box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.07);
+     box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.07);
+     h1 {
+         font-size: 1.1rem;
+         margin-bottom: 1.6rem;
+         color: $grayish3;
+     }
+     h2 {
+         font-size: 4rem;
+     }
+     .dollar {
+         position: relative;
+         bottom: 12px;
+         font-size: 2.2rem;
+         margin-right: .5rem;
+     }
+     ul {
+         width: 100%;
+         color: $grayish3;
+         list-style: none;
+         line-height: 3rem;
+         text-align: center;
+         margin-top: 2rem;
+     }
+     li {
+         border-bottom: 1px solid $grayish2;
+         &:first-child {
+             border-top: 1px solid $grayish2;
+         }
+     }
+     button {
+         font-family: Montserrat, sans-serif;
+         text-transform: uppercase;
+         color: $grayish1;
+         font-size: .8rem;
+         letter-spacing: .1rem;
+         margin-top: 2rem;
+         width: 100%;
+         border: none;
+         height: 40px;
+         background: linear-gradient(to right, $gradient1, $gradient2);
+         border-radius: 5px;
+         transition: color .3s ease-in-out;
+         cursor: pointer;
+         &:hover {
+             color: $gradient2;
+             background: #fff;
+             border: 1px solid $grayish4;
+         }
+     }
+ }
+ 
+ .price-card-pro {
+     h1,
+     h2,
+     ul {
+         color: $grayish1;
+     }
+     background: linear-gradient(to bottom, $gradient1, $gradient2);
+     border-radius: 8px;
+     height: 490px;
+     padding-top: 52px;
+     button {
+         color: $gradient2;
+         border: none;
+         background: linear-gradient(to right, $gradient1 20%, $gradient2 100%);
+         background: #fff;
+         transition: color .3s ease-in-out;
+         &:hover {
+             color: $grayish1;
+             background: none;
+             border: 1px solid $grayish1;
+         }
+     }
+ }
+ 
+ // END OF PRICE CARDS
+ .attribution {
+     font-size: 11px;
+     text-align: center;
+ }
+ 
+ .attribution a {
+     color: hsl(228, 45%, 44%);
+ }

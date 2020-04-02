@@ -1,1 +1,269 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: -6px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #a3a8f0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f6f6fe;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #696fdd;
+          box-shadow: 0 0 1px #696fdd;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+  background-color: #f6f6fe;
+  background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+}
+
+.img-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #6d708d;
+}
+
+header .toggle {
+  margin-top: 2rem;
+}
+
+header .toggle:first-child, header .toggle:last-child {
+  color: #b3b5c6;
+}
+
+header .toggle .switch {
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.price-cards {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (330px)[3];
+      grid-template-columns: repeat(3, 330px);
+  -ms-grid-rows: 500px;
+      grid-template-rows: 500px;
+  margin-bottom: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price-card {
+  height: 450px;
+  background: #fff;
+  color: #494c5f;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.07);
+  box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.07);
+}
+
+.price-card h1 {
+  font-size: 1.1rem;
+  margin-bottom: 1.6rem;
+  color: #6d708d;
+}
+
+.price-card h2 {
+  font-size: 4rem;
+}
+
+.price-card .dollar {
+  position: relative;
+  bottom: 12px;
+  font-size: 2.2rem;
+  margin-right: .5rem;
+}
+
+.price-card ul {
+  width: 100%;
+  color: #6d708d;
+  list-style: none;
+  line-height: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.price-card li {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+.price-card li:first-child {
+  border-top: 1px solid #b3b5c6;
+}
+
+.price-card button {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  color: #f6f6fe;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  height: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 5px;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  cursor: pointer;
+}
+
+.price-card button:hover {
+  color: #696fdd;
+  background: #fff;
+  border: 1px solid #494c5f;
+}
+
+.price-card-pro {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to bottom, #a3a8f0, #696fdd);
+  border-radius: 8px;
+  height: 490px;
+  padding-top: 52px;
+}
+
+.price-card-pro h1,
+.price-card-pro h2,
+.price-card-pro ul {
+  color: #f6f6fe;
+}
+
+.price-card-pro button {
+  color: #696fdd;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0 20%, #696fdd 100%);
+  background: #fff;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.price-card-pro button:hover {
+  color: #f6f6fe;
+  background: none;
+  border: 1px solid #f6f6fe;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
